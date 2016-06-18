@@ -1,7 +1,7 @@
 /* My first program */
 #include <stdio.h>
-int int main(int argc, char const *argv[]) {
+int int main() {
   /* code */
-  printf("%s\n","Hello World" );
+  printf("Hello World" );
   return 0;
 }
