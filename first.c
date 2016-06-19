@@ -1,6 +1,6 @@
 /* My first program */
 #include <stdio.h>
-int int main() {
+int main() {
   /* code */
   printf("Hello World" );
   return 0;
