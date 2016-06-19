@@ -1,0 +1,17 @@
+Git
+•	Git is a version control system. Git manages version of the code. Basically git commit "records changes to the repository." It will take snapshots automatically.
+•	In order to first start using git, you have to be in git repository. Which is like git directory.
+•	Status command checks for current status of git.
+•	To start checking for changes to the file type git init which will initialize tracking process.
+•	To start tracking the file you want, type in git add [filename] / or you can do git add . to add all files in the current directory.
+•	To write some comment/message to this commit, type git commit -m “[message]”
+•	Git log will show all the commits.
+
+
+
+
+GitHub
+First to communicate your computer to your github, generate SSH key and put it in under Settings of GitHub. (https://www.youtube.com/watch?v=OUdmg8oJVPs)
+Then create a new repository at GitHub and on the homepage of this repository, click on clone or download. Copy the SSH key and passphrase so that code in local machine and one at GitHub can communicate to each other.
+Type git remote -v to list all the remote repositories. To add the remote repository, type git remote add origin [ssh key from GitHub account]
+After you have added it, type git pull origin master to pull remote repository to local machine and type git push origin master to push the project to github.
