@@ -12,6 +12,35 @@ Git
 
 GitHub
 First to communicate your computer to your github, generate SSH key and put it in under Settings of GitHub. (https://www.youtube.com/watch?v=OUdmg8oJVPs)
-Then create a new repository at GitHub and on the homepage of this repository, click on clone or download. Copy the SSH key and passphrase so that code in local machine and one at GitHub can communicate to each other.
+
+1. To generate ssh public/private key pair type
+  ssh-keygen -t rsa -b 4096 -C "your@email.com" //ok the email part turned out to be comment
+2. It will prompt you to enter the name of the file you want to save the key into (windows only behavior?)
+   I gave it a name test.txt
+3.  Now it will prompt for passphrase twice
+4. After doing this I got the message
+  "You identification has been saved in test.txt"
+  "Public key has been saved in test.txt.pub"
+
+Then create a new repository at GitHub and on the homepage of this repository, click on clone or download.
+
+Copy the SSH key and passphrase so that code in local machine and one at GitHub can communicate to each other.
+
+In windows you get your ssh public/private key saved inside your clone path for me it was "C:\Users\dale\Documents\GitHub" infact once you click on gitshell you are already set
+- To add private key type ssh-add text.txt it will prompt for the passphrase (windows specific, for mac you might have to type in full path ~/.ssh/id_rsa)
+  It will say identity added (test.txt)
+  To test I typed
+    ssh -T git@github.com
+  It gave me the message
+  "Warning: Permanently added 'github.com,192.30.252.129' (RSA) to the list of known hosts."
+  "Hi bournvita555! You've successfully authenticated, but GitHub does not provide shell access."
+  - In order to get rid of the Warning message I had to open .ssh folder by opening cmd and typing "cd .ssh" then "start ."
+  - There I made a file named config and inserted the line "UserKnownHostsFile ~/.ssh/known_hosts"
+  To quote "http://stackoverflow.com/questions/9299651/git-says-warning-permanently-added-to-the-list-of-known-hosts" here
+  "You will then see the message the next time you access Github, but after that you'll not see it anymore as the host is added to the known_hosts file.
+  This actually fixes the issue, rather than just hiding the log message."
+  And it went exactly as told.
+
 Type git remote -v to list all the remote repositories. To add the remote repository, type git remote add origin [ssh key from GitHub account]
+
 After you have added it, type git pull origin master to pull remote repository to local machine and type git push origin master to push the project to github.
