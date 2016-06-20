@@ -90,6 +90,7 @@ git remote set-url origin git@github.com:USERNAME/OTHERREPOSITORY.git
 How can I view any local commits I've made, that haven't yet been pushed to the remote repository?
 
 git log origin/master..HEAD
+git log --stat origin/master..HEAD
 
 You can also view the diff using the same syntax
 
