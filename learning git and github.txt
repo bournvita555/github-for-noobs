@@ -1,4 +1,4 @@
-Git
+﻿Git
 •	Git is a version control system. Git manages version of the code. Basically git commit "records changes to the repository." It will take snapshots automatically.
 •	In order to first start using git, you have to be in git repository. Which is like git directory.
 •	Status command checks for current status of git.
@@ -13,7 +13,7 @@ Git
 GitHub
 First to communicate your computer to your github, generate SSH key and put it in under Settings of GitHub. (https://www.youtube.com/watch?v=OUdmg8oJVPs)
 
-1. To generate ssh public/private key pair type
+1. To generate ssh public/private key pair cd into your github directory and type
   ssh-keygen -t rsa -b 4096 -C "your@email.com" //ok the email part turned out to be comment
 2. It will prompt you to enter the name of the file you want to save the key into (windows only behavior?)
    I gave it a name test.txt
@@ -44,3 +44,45 @@ In windows you get your ssh public/private key saved inside your clone path for 
 Type git remote -v to list all the remote repositories. To add the remote repository, type git remote add origin [ssh key from GitHub account]
 
 After you have added it, type git pull origin master to pull remote repository to local machine and type git push origin master to push the project to github.
+
+
+#Git command lines
+
+Cloning
+Cloning a github repo is eqivalent to downloading repo from github server into your local machine
+For that click on clone or download button in your github repo and copy the repo link which looks like this https://github.com/bournvita555/github-for-noobs2.git
+type in
+    git clone https://github.com/bournvita555/github-for-noobs2.git
+
+#cd into the repo and typing "atom ." will open up atom with currently focused directory and list of files.
+
+Status
+Git Status shows you the status of git
+type in
+  git status
+
+Add
+Git Add is to add the files that are changed
+
+
+
+To create new repo in command line
+1. type
+git init //cd into folder which you want to be a git repo into and do this
+git add "nameoffileyouwanttoadd.extension"
+git commit -m "writecommenthere"
+git remote add origin git@github.com:githubaccountname/githubreponame.git
+git remote add origin git@github.com:bournvita555/abc.git
+git push -u origin master
+
+git add . //will add every thing
+git commit is taking a snapshot of that very momment (in your local machine) ?
+git remote add origin... is about linking git local directory with github server repo hence remote
+# To check git remote origin URL
+  type git remote show origin
+git push //will push our changes to github repo 
+
+Changing a remote's URL
+git remote set-url origin git@github.com:USERNAME/OTHERREPOSITORY.git
+
+//My mistake "I tried to push repo before creating it back in github, don't do that. It won't work. "
