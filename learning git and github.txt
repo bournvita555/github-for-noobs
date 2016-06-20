@@ -98,3 +98,10 @@ git diff origin/master..HEAD
 
 //To add and commit at the same time 
 git commit -a -m "comment"
+
+//To create a new branch 
+git checkout -b crazy-idea //crazy-idea is the name of new branch
+//git checkout means switch branch and -b means new branch
+git branch //will shows you all the branches in your local system 
+//To switch back to master 
+git checkout master
