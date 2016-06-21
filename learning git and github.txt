@@ -105,3 +105,6 @@ git checkout -b crazy-idea //crazy-idea is the name of new branch
 git branch //will shows you all the branches in your local system 
 //To switch back to master 
 git checkout master
+
+
+This is jpt text makes no sense at all I don't like it. In fact I hate it. 
