@@ -108,3 +108,14 @@ git checkout master
 
 
 This is jpt text makes no sense at all I don't like it. In fact I hate it. 
+
+// To push the local branch crazy-idea to github
+git push --set-upstream origin crazy-idea 
+//To pull the branch crazy-idea into master branch click "Compare and pull request" button in github website. 
+//after that click on confirm merge button 
+//then delete the branch crazy-idea because everything in it has been merged to master by clicking "delete branch" button in github.
+//but branch crazy-idea still remains in our local system to delete it we do 
+1. first switch to master branch 
+git checkout master 
+2. now delete the branch crazy-idea
+git branch --delete crazy-idea 
