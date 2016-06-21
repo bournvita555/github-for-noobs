@@ -121,4 +121,12 @@ git checkout master
 git pull 
 3. now delete the branch crazy-idea
 git branch --delete crazy-idea
+
+
+To Push a new branch : git push -u BranchName 
+To Commit and add Same Time : git commit -am "you comment"
+To Add all the files without a commit : git add . 
+To Merge a Branch into master : 
+1: git checkout master 
+2. git merge BranchName
  
