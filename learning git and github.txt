@@ -110,7 +110,10 @@ git checkout master
 This is jpt text makes no sense at all I don't like it. In fact I hate it. 
 
 // To push the local branch crazy-idea to github
-git push --set-upstream origin crazy-idea 
+git push --set-upstream origin branch_name
+			or 
+git push -u branch_name 
+
 //To pull the branch crazy-idea into master branch click "Compare and pull request" button in github website. 
 //after that click on confirm merge button 
 //then delete the branch crazy-idea because everything in it has been merged to master by clicking "delete branch" button in github.
@@ -131,3 +134,5 @@ To Merge a Branch into master :
 2. git merge BranchName
  
 //git push can do the pushing 
+
+This is a new branch thingy. 
