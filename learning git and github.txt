@@ -117,6 +117,8 @@ git push --set-upstream origin crazy-idea
 //but branch crazy-idea still remains in our local system to delete it we do 
 1. first switch to master branch 
 git checkout master 
-2. now delete the branch crazy-idea
+2.Pull all the changes from github 
+git pull 
+3. now delete the branch crazy-idea
 git branch --delete crazy-idea
  
