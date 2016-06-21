@@ -118,4 +118,5 @@ git push --set-upstream origin crazy-idea
 1. first switch to master branch 
 git checkout master 
 2. now delete the branch crazy-idea
-git branch --delete crazy-idea 
+git branch --delete crazy-idea
+ 
